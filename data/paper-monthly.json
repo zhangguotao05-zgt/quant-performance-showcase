@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "type": "paper_trading_snapshot_performance",
+  "calendar": "UTC",
+  "snapshot_schedule_utc": "00:07",
+  "snapshot_timestamp_precision": "day_label_not_actual_collection_time",
+  "collected_at_utc": "2026-10-08T16:28:46.389668+00:00",
+  "snapshot_as_of_utc": "2026-10-08T00:00:00Z",
+  "closed_month_through": "2026-09",
+  "valuation": "engine_cash_plus_collateral_plus_gross_unrealized_price_pnl",
+  "fees": "realized_costs_included_open_position_costs_not_fully_accrued",
+  "cash_ledger_reconciliation": {
+    "account_days_checked": 526,
+    "tolerance_usdt": 0.01,
+    "unexplained_residual_count": 0
+  },
+  "accounts": {
+    "A": {
+      "strategy": "A",
+      "started_at_utc": "2026-07-28T09:09:01.922802Z",
+      "initial_capital_usdt": 10000,
+      "observed_trade_leverage": [
+        1.0
+      ],
+      "months": [
+        {
+          "month": "2026-07",
+          "partial_start": true,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-07-28T09:09:01.922802Z",
+          "end_snapshot_utc": "2026-08-01T00:00:00Z",
+          "start_equity_usdt": 10000.0,
+          "end_equity_usdt": 9917.19071069,
+          "profit_usdt": -82.80928931000017,
+          "return": -0.008280928930999965,
+          "max_daily_drawdown": -0.008280928930999965
+        },
+        {
+          "month": "2026-08",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-08-01T00:00:00Z",
+          "end_snapshot_utc": "2026-09-01T00:00:00Z",
+          "start_equity_usdt": 9917.19071069,
+          "end_equity_usdt": 11191.453783230001,
+          "profit_usdt": 1274.2630725400013,
+          "return": 0.12849032651620185,
+          "max_daily_drawdown": -0.028646813563165008
+        },
+        {
+          "month": "2026-09",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-09-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-01T00:00:00Z",
+          "start_equity_usdt": 11191.453783230001,
+          "end_equity_usdt": 11735.36641338,
+          "profit_usdt": 543.9126301499982,
+          "return": 0.048600712712143945,
+          "max_daily_drawdown": -0.04100528274298798
+        },
+        {
+          "month": "2026-10",
+          "partial_start": false,
+          "in_progress": true,
+          "start_snapshot_utc": "2026-10-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-08T00:00:00Z",
+          "start_equity_usdt": 11735.36641338,
+          "end_equity_usdt": 11633.554125,
+          "profit_usdt": -101.81228837999879,
+          "return": -0.008675680400052843,
+          "max_daily_drawdown": -0.02488480541290583
+        }
+      ],
+      "since_inception": {
+        "start_snapshot_utc": "2026-07-28T09:09:01.922802Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 10000.0,
+        "end_equity_usdt": 11633.554125,
+        "profit_usdt": 1633.5541250000006,
+        "return": 0.16335541250000007,
+        "max_daily_drawdown": -0.04100528274298798
+      }
+    },
+    "B": {
+      "strategy": "B",
+      "started_at_utc": "2026-07-28T09:09:01.690113Z",
+      "initial_capital_usdt": 10000,
+      "observed_trade_leverage": [
+        5.0
+      ],
+      "months": [
+        {
+          "month": "2026-07",
+          "partial_start": true,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-07-28T09:09:01.690113Z",
+          "end_snapshot_utc": "2026-08-01T00:00:00Z",
+          "start_equity_usdt": 10000.0,
+          "end_equity_usdt": 10000.01718209,
+          "profit_usdt": 0.017182089999550954,
+          "return": 1.7182089999678851e-06,
+          "max_daily_drawdown": -0.0014711019303638162
+        },
+        {
+          "month": "2026-08",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-08-01T00:00:00Z",
+          "end_snapshot_utc": "2026-09-01T00:00:00Z",
+          "start_equity_usdt": 10000.01718209,
+          "end_equity_usdt": 10829.56280379,
+          "profit_usdt": 829.545621700001,
+          "return": 0.08295441963696959,
+          "max_daily_drawdown": -0.0194854323549547
+        },
+        {
+          "month": "2026-09",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-09-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-01T00:00:00Z",
+          "start_equity_usdt": 10829.56280379,
+          "end_equity_usdt": 10814.30601883,
+          "profit_usdt": -15.256784960000005,
+          "return": -0.0014088089460694286,
+          "max_daily_drawdown": -0.05090752157129019
+        },
+        {
+          "month": "2026-10",
+          "partial_start": false,
+          "in_progress": true,
+          "start_snapshot_utc": "2026-10-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-08T00:00:00Z",
+          "start_equity_usdt": 10814.30601883,
+          "end_equity_usdt": 10823.4471689,
+          "profit_usdt": 9.14115006999964,
+          "return": 0.0008452830957514923,
+          "max_daily_drawdown": -0.005508102511613822
+        }
+      ],
+      "since_inception": {
+        "start_snapshot_utc": "2026-07-28T09:09:01.690113Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 10000.0,
+        "end_equity_usdt": 10823.4471689,
+        "profit_usdt": 823.4471689000002,
+        "return": 0.08234471689,
+        "max_daily_drawdown": -0.061965715514878394
+      }
+    },
+    "C": {
+      "strategy": "C",
+      "started_at_utc": "2026-07-04T15:11:08.529863Z",
+      "initial_capital_usdt": 10000,
+      "observed_trade_leverage": [
+        3.0
+      ],
+      "months": [
+        {
+          "month": "2026-07",
+          "partial_start": true,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-07-04T15:11:08.529863Z",
+          "end_snapshot_utc": "2026-08-01T00:00:00Z",
+          "start_equity_usdt": 10000.0,
+          "end_equity_usdt": 9754.79959407,
+          "profit_usdt": -245.20040592999976,
+          "return": -0.024520040592999948,
+          "max_daily_drawdown": -0.02886681044156325
+        },
+        {
+          "month": "2026-08",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-08-01T00:00:00Z",
+          "end_snapshot_utc": "2026-09-01T00:00:00Z",
+          "start_equity_usdt": 9754.79959407,
+          "end_equity_usdt": 11428.44101479,
+          "profit_usdt": 1673.6414207199996,
+          "return": 0.17157107171503716,
+          "max_daily_drawdown": -0.028488017600490467
+        },
+        {
+          "month": "2026-09",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-09-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-01T00:00:00Z",
+          "start_equity_usdt": 11428.44101479,
+          "end_equity_usdt": 10604.767013419998,
+          "profit_usdt": -823.6740013700019,
+          "return": -0.07207229755170041,
+          "max_daily_drawdown": -0.07341218109138714
+        },
+        {
+          "month": "2026-10",
+          "partial_start": false,
+          "in_progress": true,
+          "start_snapshot_utc": "2026-10-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-08T00:00:00Z",
+          "start_equity_usdt": 10604.767013419998,
+          "end_equity_usdt": 10327.63669169,
+          "profit_usdt": -277.1303217299974,
+          "return": -0.02613261765952024,
+          "max_daily_drawdown": -0.02613261765952024
+        }
+      ],
+      "since_inception": {
+        "start_snapshot_utc": "2026-07-04T15:11:08.529863Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 10000.0,
+        "end_equity_usdt": 10327.63669169,
+        "profit_usdt": 327.6366916900006,
+        "return": 0.03276366916900009,
+        "max_daily_drawdown": -0.12206548707203257
+      }
+    },
+    "D": {
+      "strategy": "D",
+      "started_at_utc": "2026-07-06T14:03:15.499404Z",
+      "initial_capital_usdt": 10000,
+      "observed_trade_leverage": [
+        1.0
+      ],
+      "months": [
+        {
+          "month": "2026-07",
+          "partial_start": true,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-07-06T14:03:15.499404Z",
+          "end_snapshot_utc": "2026-08-01T00:00:00Z",
+          "start_equity_usdt": 10000.0,
+          "end_equity_usdt": 9949.9423142,
+          "profit_usdt": -50.0576858000004,
+          "return": -0.005005768580000014,
+          "max_daily_drawdown": -0.01465024799034953
+        },
+        {
+          "month": "2026-08",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-08-01T00:00:00Z",
+          "end_snapshot_utc": "2026-09-01T00:00:00Z",
+          "start_equity_usdt": 9949.9423142,
+          "end_equity_usdt": 10043.58026361,
+          "profit_usdt": 93.63794941000015,
+          "return": 0.009410903747287591,
+          "max_daily_drawdown": -0.016965348323469298
+        },
+        {
+          "month": "2026-09",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-09-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-01T00:00:00Z",
+          "start_equity_usdt": 10043.58026361,
+          "end_equity_usdt": 9822.30231349,
+          "profit_usdt": -221.27795012000024,
+          "return": -0.02203177993426675,
+          "max_daily_drawdown": -0.02203177993426675
+        },
+        {
+          "month": "2026-10",
+          "partial_start": false,
+          "in_progress": true,
+          "start_snapshot_utc": "2026-10-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-08T00:00:00Z",
+          "start_equity_usdt": 9822.30231349,
+          "end_equity_usdt": 9822.30231349,
+          "profit_usdt": 0.0,
+          "return": 0.0,
+          "max_daily_drawdown": 0.0
+        }
+      ],
+      "since_inception": {
+        "start_snapshot_utc": "2026-07-06T14:03:15.499404Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 10000.0,
+        "end_equity_usdt": 9822.30231349,
+        "profit_usdt": -177.6976865100005,
+        "return": -0.017769768650999995,
+        "max_daily_drawdown": -0.03695606567507481
+      }
+    },
+    "E": {
+      "strategy": "E",
+      "started_at_utc": "2026-07-04T15:11:08.622627Z",
+      "initial_capital_usdt": 10000,
+      "observed_trade_leverage": [
+        3.0
+      ],
+      "months": [
+        {
+          "month": "2026-07",
+          "partial_start": true,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-07-04T15:11:08.622627Z",
+          "end_snapshot_utc": "2026-08-01T00:00:00Z",
+          "start_equity_usdt": 10000.0,
+          "end_equity_usdt": 8941.97295494,
+          "profit_usdt": -1058.02704506,
+          "return": -0.10580270450600004,
+          "max_daily_drawdown": -0.11007277194825127
+        },
+        {
+          "month": "2026-08",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-08-01T00:00:00Z",
+          "end_snapshot_utc": "2026-09-01T00:00:00Z",
+          "start_equity_usdt": 8941.97295494,
+          "end_equity_usdt": 12118.10334899,
+          "profit_usdt": 3176.13039405,
+          "return": 0.3551934690537555,
+          "max_daily_drawdown": -0.07519630270451605
+        },
+        {
+          "month": "2026-09",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-09-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-01T00:00:00Z",
+          "start_equity_usdt": 12118.10334899,
+          "end_equity_usdt": 10671.01612808,
+          "profit_usdt": -1447.0872209099998,
+          "return": -0.1194153226156971,
+          "max_daily_drawdown": -0.1194153226156971
+        },
+        {
+          "month": "2026-10",
+          "partial_start": false,
+          "in_progress": true,
+          "start_snapshot_utc": "2026-10-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-08T00:00:00Z",
+          "start_equity_usdt": 10671.01612808,
+          "end_equity_usdt": 10612.8216011,
+          "profit_usdt": -58.194526979999864,
+          "return": -0.005453513168897306,
+          "max_daily_drawdown": -0.01476832858000865
+        }
+      ],
+      "since_inception": {
+        "start_snapshot_utc": "2026-07-04T15:11:08.622627Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 10000.0,
+        "end_equity_usdt": 10612.8216011,
+        "profit_usdt": 612.8216011000004,
+        "return": 0.061282160109999984,
+        "max_daily_drawdown": -0.18793763457609192
+      }
+    },
+    "F": {
+      "strategy": "F",
+      "started_at_utc": "2026-07-04T15:11:07.363452Z",
+      "initial_capital_usdt": 10000,
+      "observed_trade_leverage": [
+        3.0
+      ],
+      "months": [
+        {
+          "month": "2026-07",
+          "partial_start": true,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-07-04T15:11:07.363452Z",
+          "end_snapshot_utc": "2026-08-01T00:00:00Z",
+          "start_equity_usdt": 10000.0,
+          "end_equity_usdt": 9611.198877679999,
+          "profit_usdt": -388.801122320001,
+          "return": -0.03888011223200005,
+          "max_daily_drawdown": -0.056312773784776726
+        },
+        {
+          "month": "2026-08",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-08-01T00:00:00Z",
+          "end_snapshot_utc": "2026-09-01T00:00:00Z",
+          "start_equity_usdt": 9611.198877679999,
+          "end_equity_usdt": 12853.343625419999,
+          "profit_usdt": 3242.1447477399997,
+          "return": 0.3373298991106306,
+          "max_daily_drawdown": -0.06240236645426456
+        },
+        {
+          "month": "2026-09",
+          "partial_start": false,
+          "in_progress": false,
+          "start_snapshot_utc": "2026-09-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-01T00:00:00Z",
+          "start_equity_usdt": 12853.343625419999,
+          "end_equity_usdt": 12726.006140229998,
+          "profit_usdt": -127.33748519000073,
+          "return": -0.00990695408921971,
+          "max_daily_drawdown": -0.04137456725233013
+        },
+        {
+          "month": "2026-10",
+          "partial_start": false,
+          "in_progress": true,
+          "start_snapshot_utc": "2026-10-01T00:00:00Z",
+          "end_snapshot_utc": "2026-10-08T00:00:00Z",
+          "start_equity_usdt": 12726.006140229998,
+          "end_equity_usdt": 12576.004876039999,
+          "profit_usdt": -150.00126418999935,
+          "return": -0.011786986626999063,
+          "max_daily_drawdown": -0.0288808579895401
+        }
+      ],
+      "since_inception": {
+        "start_snapshot_utc": "2026-07-04T15:11:07.363452Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 10000.0,
+        "end_equity_usdt": 12576.004876039999,
+        "profit_usdt": 2576.0048760399986,
+        "return": 0.2576004876039999,
+        "max_daily_drawdown": -0.0985014605839113
+      }
+    }
+  },
+  "portfolio": {
+    "common_start_snapshot_utc": "2026-07-29T00:00:00Z",
+    "start_equity_usdt": 58640.95682925,
+    "months": [
+      {
+        "month": "2026-07",
+        "partial_start": true,
+        "in_progress": false,
+        "start_snapshot_utc": "2026-07-29T00:00:00Z",
+        "end_snapshot_utc": "2026-08-01T00:00:00Z",
+        "start_equity_usdt": 58640.95682925,
+        "end_equity_usdt": 58175.12163367,
+        "profit_usdt": -465.83519557999534,
+        "return": -0.007943853933632283,
+        "max_daily_drawdown": -0.007943853933632283
+      },
+      {
+        "month": "2026-08",
+        "partial_start": false,
+        "in_progress": false,
+        "start_snapshot_utc": "2026-08-01T00:00:00Z",
+        "end_snapshot_utc": "2026-09-01T00:00:00Z",
+        "start_equity_usdt": 58175.12163367,
+        "end_equity_usdt": 68464.48483983,
+        "profit_usdt": 10289.363206159993,
+        "return": 0.17686878715875043,
+        "max_daily_drawdown": -0.02610193444408737
+      },
+      {
+        "month": "2026-09",
+        "partial_start": false,
+        "in_progress": false,
+        "start_snapshot_utc": "2026-09-01T00:00:00Z",
+        "end_snapshot_utc": "2026-10-01T00:00:00Z",
+        "start_equity_usdt": 68464.48483983,
+        "end_equity_usdt": 66373.76402742999,
+        "profit_usdt": -2090.7208124000026,
+        "return": -0.030537304374540497,
+        "max_daily_drawdown": -0.0406777425391478
+      },
+      {
+        "month": "2026-10",
+        "partial_start": false,
+        "in_progress": true,
+        "start_snapshot_utc": "2026-10-01T00:00:00Z",
+        "end_snapshot_utc": "2026-10-08T00:00:00Z",
+        "start_equity_usdt": 66373.76402742999,
+        "end_equity_usdt": 65795.76677622,
+        "profit_usdt": -577.9972512099921,
+        "return": -0.008708218671629409,
+        "max_daily_drawdown": -0.008708218671629409
+      }
+    ],
+    "since_common_start": {
+      "start_snapshot_utc": "2026-07-29T00:00:00Z",
+      "end_snapshot_utc": "2026-10-08T00:00:00Z",
+      "start_equity_usdt": 58640.95682925,
+      "end_equity_usdt": 65795.76677622,
+      "profit_usdt": 7154.809946970003,
+      "return": 0.12201045709065239,
+      "max_daily_drawdown": -0.06571790921414489
+    }
+  }
+}
