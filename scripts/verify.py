@@ -13,6 +13,7 @@ EXPECTED = {
     'reports/backtest.md', 'reports/paper-monthly.md', 'scripts/verify.py',
     'data/backtest.json', 'data/backtest-portfolio-daily.json',
     'data/paper-monthly.json', 'data/paper-equity-daily.json',
+    'data/paper-regimes.json', 'reports/parameter-changes.md',
     'assets/backtest.png', 'assets/paper-monthly.png',
 }
 
@@ -164,10 +165,56 @@ def check_paper():
     print(f'PASS: {account_days} account-days, 6 anonymous accounts, {len(data["portfolio"]["months"])} portfolio months')
 
 
+def check_regimes(data=None):
+    data = load('paper-regimes.json') if data is None else data
+    require(data['type'] == 'paper_trading_parameter_transition' and data['paper_only'] is True,
+            'Wrong parameter-transition scope')
+    require(data['target_new_entry_leverage'] == 5, 'Unexpected entry leverage')
+    require(data['performance_history_rebased'] is False, 'Historical performance must not be rebased')
+    require(data['margin_rule'] == 'preserve_original_margin_allocation', 'Unexpected margin policy')
+    require(data['legacy_position_policy'] == 'keep_recorded_leverage_size_and_exit_logic',
+            'Unexpected legacy-position policy')
+    accounts = data['accounts']
+    require(set(accounts) == set(ALIASES), 'Invalid transition aliases')
+    start = parse(data['rollout_started_at_utc'])
+    finish = parse(data['all_new_entries_verified_at_utc'])
+    checked = parse(data['validation_as_of_utc'])
+    require(start < finish <= checked, 'Invalid transition timeline')
+    changed = []
+    paper = load('paper-monthly.json')
+    for alias, account in accounts.items():
+        require(account['new_entry_leverage'] == 5, 'Unexpected account entry leverage')
+        require(account['previous_new_entry_leverage'] in paper['accounts'][alias]['observed_trade_leverage'],
+                'Previous leverage disagrees with published trade history')
+        close(data['initial_capital_per_account_usdt'], paper['accounts'][alias]['initial_capital_usdt'])
+        if account['changed']:
+            require(account['previous_new_entry_leverage'] != 5, 'Invalid changed flag')
+            began, verified = parse(account['process_started_at_utc']), parse(account['verified_at_utc'])
+            require(start <= began < verified <= finish, 'Invalid account transition timeline')
+            require(account['legacy_positions_at_cutover'] >= 0, 'Invalid legacy-position count')
+            changed.append(account)
+        else:
+            require(account['previous_new_entry_leverage'] == 5 and account['process_started_at_utc'] is None,
+                    'Unchanged account should already use target leverage')
+            require(account['legacy_positions_at_cutover'] is None, 'Unchanged account has no cutover')
+            require(parse(account['verified_at_utc']) <= checked, 'Invalid unchanged-account check time')
+    require(min(parse(row['process_started_at_utc']) for row in changed) == start and
+            max(parse(row['verified_at_utc']) for row in changed) == finish, 'Incorrect aggregate transition time')
+    verification = data['verification']
+    close(verification['changed_accounts'], len(changed))
+    close(verification['healthy_paper_accounts'], len(ALIASES))
+    close(verification['legacy_positions_preserved_in_changed_accounts'],
+          sum(row['legacy_positions_at_cutover'] for row in changed))
+    for count in verification.values():
+        require(type(count) is int and count >= 0, 'Invalid verification count')
+    print('PASS: anonymous parameter-transition timeline and account continuity metadata')
+
+
 def main():
     check_files()
     check_backtest()
     check_paper()
+    check_regimes()
     print('PASS: file allowlist, hashes, links, historical aggregates and paper-month arithmetic')
     print('This verifies published arithmetic, not independent trading authenticity.')
 

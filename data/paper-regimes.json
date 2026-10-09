@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "type": "paper_trading_parameter_transition",
+  "paper_only": true,
+  "rollout_started_at_utc": "2026-10-09T01:27:37.540706137Z",
+  "all_new_entries_verified_at_utc": "2026-10-09T01:33:17.259920+00:00",
+  "validation_as_of_utc": "2026-10-09T01:37:02.216779+00:00",
+  "target_new_entry_leverage": 5,
+  "margin_rule": "preserve_original_margin_allocation",
+  "legacy_position_policy": "keep_recorded_leverage_size_and_exit_logic",
+  "performance_history_rebased": false,
+  "initial_capital_per_account_usdt": 10000,
+  "accounts": {
+    "A": {
+      "previous_new_entry_leverage": 1,
+      "new_entry_leverage": 5,
+      "changed": true,
+      "process_started_at_utc": "2026-10-09T01:33:00.399361005Z",
+      "verified_at_utc": "2026-10-09T01:33:17.259920+00:00",
+      "legacy_positions_at_cutover": 5
+    },
+    "B": {
+      "previous_new_entry_leverage": 5,
+      "new_entry_leverage": 5,
+      "changed": false,
+      "process_started_at_utc": null,
+      "verified_at_utc": "2026-10-09T01:37:02.216779+00:00",
+      "legacy_positions_at_cutover": null
+    },
+    "C": {
+      "previous_new_entry_leverage": 3,
+      "new_entry_leverage": 5,
+      "changed": true,
+      "process_started_at_utc": "2026-10-09T01:27:37.540706137Z",
+      "verified_at_utc": "2026-10-09T01:27:54.314212+00:00",
+      "legacy_positions_at_cutover": 0
+    },
+    "D": {
+      "previous_new_entry_leverage": 1,
+      "new_entry_leverage": 5,
+      "changed": true,
+      "process_started_at_utc": "2026-10-09T01:30:25.299362314Z",
+      "verified_at_utc": "2026-10-09T01:30:42.250857+00:00",
+      "legacy_positions_at_cutover": 1
+    },
+    "E": {
+      "previous_new_entry_leverage": 3,
+      "new_entry_leverage": 5,
+      "changed": true,
+      "process_started_at_utc": "2026-10-09T01:31:29.240593166Z",
+      "verified_at_utc": "2026-10-09T01:31:46.064016+00:00",
+      "legacy_positions_at_cutover": 5
+    },
+    "F": {
+      "previous_new_entry_leverage": 3,
+      "new_entry_leverage": 5,
+      "changed": true,
+      "process_started_at_utc": "2026-10-09T01:28:54.899831866Z",
+      "verified_at_utc": "2026-10-09T01:29:11.805970+00:00",
+      "legacy_positions_at_cutover": 1
+    }
+  },
+  "verification": {
+    "changed_accounts": 5,
+    "healthy_paper_accounts": 6,
+    "runtime_image_regression_tests_passed": 11,
+    "closed_trades_preserved_in_changed_accounts": 232,
+    "legacy_positions_preserved_in_changed_accounts": 12,
+    "new_5x_trades_observed_in_changed_accounts": 0
+  }
+}
