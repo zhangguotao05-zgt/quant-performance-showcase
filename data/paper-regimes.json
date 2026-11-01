@@ -66,6 +66,6 @@
     "runtime_image_regression_tests_passed": 11,
     "closed_trades_preserved_in_changed_accounts": 232,
     "legacy_positions_preserved_in_changed_accounts": 12,
-    "new_5x_trades_observed_in_changed_accounts": 0
+    "new_5x_trades_observed_in_changed_accounts": 110
   }
 }
